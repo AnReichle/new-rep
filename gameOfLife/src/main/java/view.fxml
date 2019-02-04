@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<?import javafx.scene.canvas.Canvas?>
+
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.control.Slider?>
+
+<?import javafx.scene.control.ToolBar?>
+
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.text.Text?>
+
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+
+   <children>
+
+      <ToolBar prefHeight="35.0" prefWidth="400.0">
+
+        <items>
+
+          <Button fx:id="btnStart" mnemonicParsing="false" onAction="#handleBtnStartAction" text="start" />
+
+            <Button fx:id="btnNext" mnemonicParsing="false" onAction="#handleBtnNextAction" text="next" />
+
+            <Button fx:id="btnRandomize" mnemonicParsing="false" onAction="#handleBtnRandomizeAction" text="randomize" />
+
+        </items>
+
+      </ToolBar>
+
+      <ToolBar prefHeight="26.0" prefWidth="600.0">
+
+        <items>
+
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="fill factor" />
+
+            <Slider fx:id="fillFactor" blockIncrement="0.05" max="1.0" prefHeight="10.0" prefWidth="80.0" value="0.5" />
+
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="frame rate" />
+
+            <Slider fx:id="frameDuration" max="100000.0" min="10.0" prefHeight="10.0" prefWidth="80.0" value="10.0" />
+
+        </items>
+
+      </ToolBar>
+
+      <Canvas fx:id="canvas" height="339.0" width="400.0" />
+
+   </children>
+
+</VBox>
